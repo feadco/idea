@@ -60,14 +60,14 @@
                             </thead>
                             <tbody>
                                 <tr class="idea-row" v-for="(idea, key) in ideas" :key="key">
-                                    <td>@{{ idea.name }}</td>
-                                    <td class="text-right">
-                                        <div v-if="idea.domains.length !== 0">
-                                            <div v-for="(available, domain) in idea.domains" class="small" :class="available ? 'text-success' : 'text-muted'">
-                                                @{{ domain }}
-                                            </div>
+                                    <td v-if="idea.domains.length === 0">@{{ idea.name }}</td>
+                                    <td v-else>
+                                        <div v-for="(available, domain) in idea.domains" :class="available ? 'text-success' : 'text-danger'">
+                                            @{{ domain }}
                                         </div>
-                                        <div class="row-buttons" v-else>
+                                    </td>
+                                    <td class="text-right">
+                                        <div class="row-buttons" v-if="idea.domains.length === 0">
                                             <button class="btn btn-sm btn-primary" @click="checkDomain(idea.name)" :disabled="loadingButton">Check domains</button>
                                         </div>
                                     </td>
