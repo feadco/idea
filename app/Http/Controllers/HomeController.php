@@ -31,8 +31,8 @@ class HomeController extends Controller
     {
         return Yoncu::check([
             "{$domain}.com",
+            "{$domain}.co",
             "{$domain}.net",
-            "{$domain}.org",
         ]);
     }
 }
