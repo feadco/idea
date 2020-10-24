@@ -13,6 +13,6 @@
 |
 */
 
-$router->get('/', function () use ($router) {
-    return $router->app->version();
-});
+$router->get('/', 'HomeController@index');
+$router->get('/ideas', 'HomeController@ideas');
+$router->post('/check-domain/{domain}', 'HomeController@checkDomain');
