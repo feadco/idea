@@ -68,7 +68,7 @@
                                     </td>
                                     <td class="text-right">
                                         <div class="row-buttons" v-if="idea.domains.length === 0">
-                                            <button class="btn btn-sm btn-primary" @click="checkDomain(idea.name)" :disabled="loadingButton">Check domains</button>
+                                            <button class="btn btn-sm btn-link" @click="checkDomain(idea.name)" :disabled="loadingButton">Check domains</button>
                                         </div>
                                     </td>
                                 </tr>
