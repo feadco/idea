@@ -88,7 +88,7 @@
 
             data() {
                 return {
-                    search: "<><>",
+                    search: "<><><",
                     ideas: [],
                     awaitingSearch: false,
                     loadingButton: false,
